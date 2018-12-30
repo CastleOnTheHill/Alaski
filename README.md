@@ -43,7 +43,7 @@
 
 ### 1. 初始状态
 
-登入成功之后我们可以看到，赌场的拥有者，和当前的赌池金额3个以太币，当前用户以及用户余额。
+登入成功之后我们可以看到，赌场的拥有者，和当前的赌池金额4个以太币，当前用户以及用户余额。
 
 ![初始状态](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/1%E5%88%9D%E5%A7%8B%E7%8A%B6%E6%80%81.jpg?raw=true)
 
