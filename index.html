@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<!--
+	Iridium by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>ALASKI</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/web3.min.js"></script>
+		<script src="js/bcp.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="homepage">
+		<div id="Filter">
+			<div id="header">
+				<div class="container"> 
+					
+					<div id="logo">
+						<h1><a href="#">Alaski</a></h1>
+						<span>A casinos fully powered by blockchain</span>
+					</div>
+					<h2 id="owner">Owner : <span></span></h2>
+					<br>
+					<h2 id="current_money">current bet pool amount : <span></span> eth</h2>
+
+				</div>
+			</div>
+			<div id="featured">
+				<div id="userInfo">
+					<p>account: <span id="account_addr">0x3a3d3d7a0551ff6250fc8f08759d39b6ddc25676</span> (<span id="account_balance">20 ETH</span>)  <a href="#" id="log_out">log out</a></p>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="4u" id="prebet_div">
+							<h2>Pre bet turn</h2>
+							<h3>clock : <span class="clock_val">0</span></h3>
+							<a href="#" class="image full"><img src="images/pic01.jpg" alt="" /></a>
+							<p>In this turn, you need to pick a number (none zero), and keep it in mind as well as a secret, it will be used in
+								the real bet turn.</p>
+							<input type="text" id="pre_pick_num" placeholder="number you pick">
+							<button class="button disabled_button" id="pre_bet" disabled="disabled">Prebet</button>
+						</div>
+						<div class="4u" id="realbet_div">
+							<h2>Real bet turn</h2>
+							<h3>clock : <span class="clock_val">0</span></h3>
+							<a href="#" class="image full"><img src="images/pic02.jpg" alt="" /></a>
+							<p>In this turn, input the number you pick in the per bet turn, input the value of money you want to gamble as well
+								.</p>
+							<input type="text" id="real_pick_num" placeholder="number you pick"><input type="text" id="value_num" placeholder="money you bet (ETH)">
+							<button class="button disabled_button" id="bet" disabled="disabled">Realbet</button>
+						</div>
+						<div class="4u" id="lottery_div">
+							<h2>Drawing a lottery</h2>
+							<h3>clock : <span class="clock_val">0</span></h3>
+							<a href="#" class="image full"><img src="images/pic03.jpg" alt="" /></a>
+							<p>The random (maybe not) number you and any other else picked in first place will generate a random case, start
+								the gamble and see if you are the lucky gay !</p>
+							<button class="button disabled_button" id="lottery" disabled="disabled">lottery</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="copyright">
+				<div class="container">
+					Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+				</div>
+			</div>
+		</div>
+
+		<div id="sign_in">
+			<p>Welcome</p>
+			<input type="text" id="user_address" placeholder="account address">
+			<input type="password" id="user_password" placeholder="password">
+			<button class="button" id="log_in">sign in</button>
+		</div>
+		
+	</body>
+</html>
