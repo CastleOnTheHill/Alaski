@@ -26,11 +26,62 @@
 
 ## 2. 使用说明
 
+1. 开启本地geth在8545端口`--rpc --rpcport "8545"`，暴露API`-- rpcapi="db,eth,net,web3,personal,web3"`。
+2. 使用remix将合约gamble.sol在本地链上部署。
+3. 部署过后，将合约的地址复制到`js/bcp.js:8`的`contrct_addr`变量。
+4. 双击index.html，输入本地账户的用户名，密码登入。
 
+![登入界面](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/%E7%99%BB%E5%85%A5%E7%95%8C%E9%9D%A2.png?raw=true)
 
+![界面1](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/%E7%95%8C%E9%9D%A21.png?raw=true)
 
+5. 依次在规定时间内完成预下注、下注、最后开奖。
+
+![界面2](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/%E7%95%8C%E9%9D%A22.png?raw=true)
 
 ## 3. 测试
 
+### 1. 初始状态
 
+登入成功之后我们可以看到，赌场的拥有者，和当前的赌池金额3个以太币，当前用户以及用户余额。
+
+![初始状态](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/1%E5%88%9D%E5%A7%8B%E7%8A%B6%E6%80%81.jpg?raw=true)
+
+### 2.预下注
+
+当时间轮到预下注时，填一个自己想要的数字，点击预下注按钮后，页面会发起一个调用合约函数的交易。
+
+![预下注1](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/2.1%E9%A2%84%E4%B8%8B%E6%B3%A8.jpg?raw=true)
+
+等到矿工将这些交易确认打包，生成一个新的区块之后，根据监听函数的返回信息，给客户相应的提示：预下注成功或失败。
+
+![预下注2](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/2.2%E9%A2%84%E4%B8%8B%E6%B3%A8.jpg?raw=true)
+
+
+
+### 3. 下注
+
+当预下注成功之后，并且在下注的时间段内，客户再次输入之前选择的数字，和想要下注的金额（单位为ETH），点击REALBET按钮后，页面发起一个调用合约函数的交易。
+
+![下注1](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/3.1%E4%B8%8B%E6%B3%A8.jpg?raw=true)
+
+等到矿工将这些交易确认打包，生成一个新的区块之后，根据监听函数的返回信息，给客户相应的提示：下注成功或失败。
+
+![预下注2](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/3.2%E4%B8%8B%E6%B3%A8.jpg?raw=true)
+
+### 4. 开奖
+
+当前两步成功完成之后，并且在开奖的时间段内，用户点击LOTTERY按钮后，页面发起一个调用合约函数的交易。
+
+![开奖1](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/4.1%E5%BC%80%E5%A5%96.jpg?raw=true)
+
+等到矿工将这些交易确认打包，生成一个新的区块之后，根据监听函数的返回信息，给客户相应的提示：开奖结果，赢了或是输了。
+
+![开奖2](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/4.2%E5%BC%80%E5%A5%96.jpg?raw=true)
+
+### 5. 结束状态
+
+因为上面的演示中用户输给了庄家1ETH，可以看到此时赌池的金额相对开始的状态多了1ETH。
+
+![结束状态](https://github.com/CastleOnTheHill/Alaski/blob/master/report_images/5%E7%BB%93%E6%9D%9F%E7%8A%B6%E6%80%81.jpg?raw=true)
 
