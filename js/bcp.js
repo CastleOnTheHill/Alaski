@@ -275,7 +275,8 @@ $(document).ready(() => {
   $("#log_out").click(()=> {
     $("#Filter").css("filter", "blur(5px)");
     $("#sign_in").css({ "z-index": 2, "opacity": 100 });
-    $("#user_address").val("");
+    $("#user_address").val(window.APP.account);
+    $("#user_password").val("");
   });
 });
 
